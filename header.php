@@ -6,10 +6,6 @@
  *
  * @package visual23
  */
-//global $detect;
-//$detect = new Mobile_Detect;
-//global $deviceType;
-//$deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'computer');
 
 
 ?><!DOCTYPE html>
