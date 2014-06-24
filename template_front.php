@@ -2,17 +2,9 @@
 /*
 Template name: Front
 */
-
-$template_url = get_bloginfo( 'template_url' );
-$site_url = get_bloginfo( 'url' );
-
 ?>
 <?php get_header() ?>
-<?php
 
-
-
-?>
 <div id="topLeaves"></div>
         <div id="leftLeaves"></div>
 
