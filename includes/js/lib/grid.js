@@ -348,7 +348,7 @@ var Grid = (function($) {
             this.$carousel = $( '<div id="myCarousel" class="carousel slide" data-ride="carousel"><div class="carousel-inner"></div><a href="#myCarousel" class="left carousel-control" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a><a href="#myCarousel" class="right carousel-control" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading, this.$carousel );
 			
-			this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$fullimage, this.$details );
+			this.$previewInner = $( '<div class="og-expander-inner container"></div>' ).append( this.$fullimage, this.$details );
 			this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
 			// append preview element to the item
 			this.$item.append( this.getEl() );

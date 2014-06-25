@@ -70,7 +70,6 @@ Template name: Front
         <section class="slice" id="workSection" >
             <div class="container">
                 <h1>I worked on these projects.</h1>
-            </div>
             <div id="workGridHolder">
                 <ul id="og-grid" class="og-grid">
                    <?php 
@@ -115,13 +114,15 @@ if( $my_query->have_posts() ) {
 
     echo '<li>';
     echo '<a class="thumbnailLink" href="'.get_field('project_link').'" data-slug="'.$post->post_name.'" data-largesrc="'.$large_images.'" data-title="'.get_the_title($ID).'" data-what="'.get_field('what_i_did').'" data-description="'.get_field('project_description').'" data-client="'.get_field('client_name').'" data-agency="'.get_field('agency_name').'">';
+    echo '<div class="thumbnailInfoWrapper">';
     echo '<div class="thumbnailInfo">';
     echo '<div class="thumbnailProjectTitle">'.get_the_title($ID).'</div>';
     echo '<div class="thumbnailProjectDetails">'.get_field('what_i_did').'</div>';
     echo '</div>';
+    echo '</div>';
     echo '<div class="workThumbnail">';
     echo '<div class="thumbnailFader"></div>';
-    echo '<img src="'.get_field('small_image').'" alt="'.get_field('project_title').'" />';
+    echo '<img src="'.get_field('small_image').'" alt="'.get_field('project_title').'" title="'.get_the_title($ID).'" />';
     echo '</div>';                     
     echo ' </a>';
     echo '</li>';
@@ -133,7 +134,8 @@ endwhile;
 wp_reset_query();
 	  ?>
                     
-                </ul>                
+                </ul>
+                    </div>
             </div>
         </section>
 

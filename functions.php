@@ -189,6 +189,42 @@ function visual23_scripts() {
 add_action( 'wp_enqueue_scripts', 'visual23_scripts' );
 
 
+add_action( 'init', 'work');
+function work(){
+  register_post_type(
+    'work', 
+    array(
+      'description' => '',
+      'public' => true,
+      'show_ui' => true,
+      'show_in_menu' => true,
+      'capability_type' => 'post',
+      'hierarchical' => false,
+      //'rewrite' => array('slug' => ''),
+      'rewrite' => array('with_front' => false, 'slug' => 'work'),
+      'query_var' => true,
+      'has_archive' => true,
+      'supports' => array( 'title','revisions' ),
+      'labels' => array (
+        'name' => 'Work',
+        'singular_name' => 'Work',
+        'menu_name' => 'Work',
+        'add_new' => 'Add a work item',
+        'add_new_item' => 'Add a new work item',
+        'edit' => 'Edit',
+        'edit_item' => 'Edit work item',
+        'new_item' => 'New work item',
+        'view' => 'View work item',
+        'view_item' => 'View work item',
+        'search_items' => 'Search Work',
+        'not_found' => 'No work found',
+        'not_found_in_trash' => 'No work found in trash',
+        'parent' => 'Parent'
+      )
+    )
+  );
+}
+
 
 
 /**
